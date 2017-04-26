@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Get a reference to the todoItems child items it the database
         final DatabaseReference myRef = database.getReference("todoItems");
+        final DatabaseReference newRef = database.getReference();
+        newRef.push().setValue("new child");
 
         // Assign a listener to detect changes to the child items
         // of the database reference.
